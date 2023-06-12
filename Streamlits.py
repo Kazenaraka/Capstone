@@ -27,6 +27,7 @@ from sklearn.metrics import confusion_matrix
 from mlxtend.plotting import plot_confusion_matrix
 from keras.utils import pad_sequences
 import pickle
+nltk.download('punkt')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 stop_factory = StopWordRemoverFactory()
 more_stopword = ['dengan', 'ia','bahwa','oleh','tak','jadi','hingga','bakal']
