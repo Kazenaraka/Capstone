@@ -36,18 +36,7 @@ stopword = stop_factory.create_stop_word_remover()
 field = ['title','label', 'label_score']
 headlines = pd.read_csv("data/annotated/combined/csv/main.csv", usecols=field)
 scrapped = pd.read_csv("scraped_data.csv")
-metro = pd.read_csv("data/annotated/csv/annotated_pos_metro.csv", usecols=field)
-detik= pd.read_csv("data/annotated/csv/annotated_detikNews.csv", usecols=field)
-fimela = pd.read_csv("data/annotated/csv/annotated_fimela.csv", usecols=field)
-kapanlagi = pd.read_csv("data/annotated/csv/annotated_kapanlagi.csv", usecols=field)
-kompas = pd.read_csv("data/annotated/csv/annotated_kompas.csv", usecols=field)
-liputan = pd.read_csv("data/annotated/csv/annotated_liputan6.csv", usecols=field)
-okezone = pd.read_csv("data/annotated/csv/annotated_okezone.csv", usecols=field)
-republika = pd.read_csv("data/annotated/csv/annotated_republika.csv", usecols=field)
-sindownews = pd.read_csv("data/annotated/csv/annotated_sindonews.csv", usecols=field)
-tempo = pd.read_csv("data/annotated/csv/annotated_tempo.csv", usecols=field)
-tribunnews = pd.read_csv("data/annotated/csv/annotated_tribunnews.csv", usecols=field)
-wowkeren = pd.read_csv("data/annotated/csv/annotated_wowkeren.csv", usecols=field)
+
 
 def preprocess(data, stopword):
     tokens = word_tokenize(data)
