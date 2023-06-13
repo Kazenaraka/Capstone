@@ -104,7 +104,7 @@ def main():
     with col2:
         st.subheader("Distribusi Headlines yang dianalisa memiliki distribusi yang tidak umum")
         headlines["length"] = [len(text.split()) for text in headlines.title]
-        sns.kdeplot(headlines.sort_values(by="length", ascending=False).length, shade=True)
+        sns.kdeplot(headlines.sort_values(by="length", ascending=False).length, fill=True)
         fig = plt.gcf()
         fig.set_size_inches(10, 8)  
         st.pyplot()
