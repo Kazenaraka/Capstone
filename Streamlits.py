@@ -9,7 +9,6 @@ from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFacto
 from nltk import word_tokenize
 from sklearn.feature_extraction.text import CountVectorizer
 import nltk
-from plotnine import ggplot, aes, geom_density, theme_minimal
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
