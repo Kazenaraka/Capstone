@@ -286,8 +286,6 @@ def main():
             encoded_articles = tkz.texts_to_sequences(article_texts)
             encoded_articles = pad_sequences(encoded_articles, maxlen=MAX_LEN)
             labels = model.predict(encoded_articles)
-            df = pd.DataFrame({"Article": [article_texts], "Label": [int(labels)]})
-            st.write(df)
             # Update the DataFrame with the predicted labels
             df['Label'] = [1 if label > 0.5 else 0 for label in labels]
 
