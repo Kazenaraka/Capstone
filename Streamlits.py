@@ -269,7 +269,7 @@ def main():
             fig.update_layout(margin=dict(t=50, b=10, l=10, r=10))
             st.plotly_chart(fig)
     elif option == "Clickbait Check":
-        uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+        uploaded_file = st.file_uploader("Upload a CSV file (Artikel, Tanggal)", type=["csv"])
         if uploaded_file is not None:
             MAX_LEN = 50
             df = pd.read_csv(uploaded_file)
