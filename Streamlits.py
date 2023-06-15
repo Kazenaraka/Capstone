@@ -296,7 +296,8 @@ def main():
 
             # Group the data by 'Label' and count the occurrences for the pie chart
             label_counts = df.groupby('Label').size().reset_index(name='Count')
-
+            # Map the label values to corresponding names
+            label_counts['Label'] = label_counts['Label'].map({0: 'non-clickbait', 1: 'clickbait'})
             # Create a pie chart to show the distribution of clickbait and non-clickbait articles
             pie_chart = px.pie(label_counts, values='Count', names='Label', 
                             title='Distribution of Clickbait and Non-Clickbait Articles')
